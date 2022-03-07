@@ -6,3 +6,5 @@
 * C6 - Rebotar un objeto por la pantalla
 * C7 - Desplazar objeto a modo de Ping Pong
 * C8 - Implementar caída libre
+* C9 - Implementar tiro parabólico
+* C10 - Implementar movimiento circular uniformemente variado

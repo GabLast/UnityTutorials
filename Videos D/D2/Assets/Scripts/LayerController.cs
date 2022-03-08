@@ -5,8 +5,8 @@ using UnityEngine;
 public class LayerController : MonoBehaviour
 {
 
-    float scrollingSpeed = 0.2f, currentSpeed;
-    Vector2 pos = new Vector2();
+    float scrollingSpeed = 0.1f, currentSpeed;
+    Vector2 currentPos = new Vector2();
     MeshRenderer renderer;
     // Start is called before the first frame update
     void Start()
@@ -18,8 +18,8 @@ public class LayerController : MonoBehaviour
     void Update()
     {
         currentSpeed = scrollingSpeed * (20 / gameObject.transform.position.z);
-        pos.x = currentSpeed * Time.deltaTime + pos.x;
-        /*pos.y = scrollingSpeed * Time.deltaTime + pos.y;*/
-        renderer.material.mainTextureOffset = pos;
+        currentPos.x = currentPos.x + currentSpeed * Time.deltaTime;
+        /*currentPos.y = scrollingSpeed * Time.deltaTime + pos.y;*/
+        renderer.material.mainTextureOffset = currentPos;
     }
 }
